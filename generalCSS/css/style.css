@@ -1,0 +1,24 @@
+body{
+	margin-top: 10px;
+	background-color:#f9f9f9;
+}
+div.c-wrapper{
+    width: 70%; /* for example */
+    margin-top: 10px;
+    margin: auto;
+}
+
+.carousel-inner > .item > img, 
+.carousel-inner > .item > a > img{
+width: 70%; /* use this, or not */
+margin-top: 10px;
+margin: auto;
+}
+
+.container-fluid{
+	background-color:#fffdd0;
+	border-style:none;
+}
+.navbar-inverse{
+	background-color: none !important;
+}
