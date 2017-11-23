@@ -1,0 +1,117 @@
+body{
+	margin-top: 10px;
+	background: #f5fffA;
+}
+.navmargin{
+	margin-top:-10px;
+}
+.signin{
+	margin-right: -50em;
+}
+.red{
+	color: red;
+}
+.green{
+	color: green;
+}
+.blue{
+	color: blue;
+}
+.white{
+	color:#ffffff;
+}
+.indigo{
+	color: #4B0082;
+}
+#black{
+	color:#000000;
+}
+
+.purple{
+	color:#800080;
+}
+.navbar-brand.colorpic{
+	color:#0069D9;
+	font-size: 30px;
+	font-weight: bolder;
+}
+.signOutHP{
+	margin-right: -30em;
+}
+.headerHP{
+	margin-left: -13em;
+}
+.de-font{
+	font-size: 3.0em;
+}
+.userHP{
+	margin-left: -10em;
+}
+.headerind{
+	margin-left: -16em;
+}
+.signinAdm{
+	margin-right: -50em;
+}
+.parPad{
+	padding-bottom: 10px;
+}
+/******************
+FOOTER
+******************/
+footer {
+	font-size: 0.75em;
+	text-align: center;
+	clear: both;
+	padding-top: 50px;
+	color: #ccc;
+}
+
+.social-icon {
+	width: 50px;
+	height: 20px;
+	margin: 0 -7px;
+}
+
+.eventsColor {
+	color: #C19BBA;
+}
+#wrapper {
+	max-width: 940px;
+	margin: 0 auto;
+	padding: 0 5%;
+ }
+ body.view{
+	font-family: 'Open Sans', sans-serif;''
+ }
+
+
+
+/******************
+PAGE: VIEW
+******************/
+
+#gallery {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#gallery li {
+	float: left;
+	width: 45%;
+	margin: 2.5%;
+	background-color: #f5f5f5;
+	color: #000000;
+}
+
+#gallery li a p {
+	margin right: 0px;
+	padding: 5%;
+	font-size: 0.75em;
+	color: #bdc3c7;
+}
+
+.zeromartop{
+	margin-top: 0;
+}
