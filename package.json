@@ -8,8 +8,8 @@
     "test": "test"
   },
   "scripts": {
-    "start:dev": "nodemon ./bin/www",
-    "start": "node ./bin/www",
+    "start:dev": "nodemon ./server/bin/www",
+    "start": "node ./server/bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
