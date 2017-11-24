@@ -1,0 +1,30 @@
+{
+  "name": "eventmanager",
+  "version": "1.0.0",
+  "description": "Creating Event Manager Srver-side",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "start:dev": "nodemon ./bin/www",
+    "start": "node ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adedayo-A/EventManager.git"
+  },
+  "author": "Adesegun Adedayo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Adedayo-A/EventManager/issues"
+  },
+  "homepage": "https://github.com/Adedayo-A/EventManager#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0"
+  }
+}
