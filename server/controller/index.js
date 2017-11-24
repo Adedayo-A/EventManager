@@ -1,160 +1,94 @@
-const centers = [
-	{
-		"id": "1",
-		"name": "Grace hall",
-		"capacity": "2000",
-		"rating": "* * * * *",
-		"Upcoming events": "Award ceremony",
-		"descriptions": "Beside the popular red ocean mall"
-	},
+const centers = require('../db/centers')
+const events = require('../db/events')
 
-	 {
-	 	"id": "2",
-		"name": "Ballerina hall",
-		"capacity": "2500",
-		"rating": "* * * * *",
-		"Upcoming events": "Wedding ceremony",
-		"descriptions":"20 mins drive from the mainland exit"
-	},	
+const validateId = (id, data) => {
+	return data.length > id;
+}
 
+class Controllers {
 
-	{
-		"id": "3",
-		"name": "Friends hall",
-		"capacity": "1500",
-		"rating": "* * * * *",
-		"Upcoming events": "Music show",
-		"descriptions": "From the airport, take the lane 3 down"
-	},
+	static getAll(req,res){
+   res.status(200).send({
+    message: 'Welcome to the BOOK Events API!',
+  })
+}
 
-
-	{
-		"id": "4",
-		"name": "Diamond's hall",
-		"capacity": "2500",
-		"rating": "* * * * * *",
-		"Upcoming events": "Blue governor's conference",
-		"descriptions": "Behind the Government's square buildings"
+	static addCenter(req, res) {
+	  req.body.id = centers.length;
+      centers.push(req.body);
+      res.status(200).send(centers);
 	}
-]
 
-
-const events = [
-	{
-		"id": "event1",
-		"name of event": "race party",
-		"Date of event": "12/12/2017",
-		"location": "Diamond's hall",
-		"descriptions": "Behind the Government's square buildings",
-		"Host": "Fola Ajayi"
-		
-	},
-
-	 {
-		"id": "event2",
-		"name of event": "Entrepreneurship meet-up",
-		"Date of event": "15/12/2017",
-		"location": "Grace hall",
-		"descriptions": "Beside the popular red ocean mall",
-		"Host": "Mary swiss"
-	},
-
-
-	{
-		"id": "event3",
-		"name of event": "Merit Award ceremony",
-		"Date of event": "17/12/2017",
-		"location": "Friend's hall",
-		"descriptions": "From the airport, take the lane 3 down",
-		"Host": "Ankers",
-	},
-
-
-	{
-		"id": "event4",
-		"name of event": "Karaoke night",
-		"Date of event": "13/12/2017",
-		"location": "Ballerina hall",
-		"descriptions": "20 mins drive from the mainland exit",
-		"Host": "Paul Thomas"
+	static addEvent(req, res) {
+	  req.body.id = events.length;
+      events.push(req.body)
+      res.status(200).send(events);
 	}
-]
+
+	static listEvent(req,res) {
+		res.status(200).send(centers)
+	}
+
+	static getEvent(req,res){
+		res.status(200).send(centers)
+   }
+
+	static getCenter(req,res){
+		res.status(200).send(centers)
+	}
+
+	static getACenter(req,res){
+		let aCenter;
+       let isUndefined = false
+       for (let i = 0;i < centers.length; i++) {
+         if ( centers[i].id === parseFloat(req.params.id)) {
+           aCenter = centers[i];
+           break;
+         } else {
+           isUndefined = true
+         }
+       }
+       if (aCenter) {
+         return res.status(200).send({ message: 'Success', aCenter})
+       } else {
+         return res.status(400).send({ error: 'no center found'})
+       }
+   }
+
+	static modifyEvent(req,res){
+		const id = req.param.id - 1; // zero index
+		console.log(id);
+       if (validateId(id, events)) {
+           events[id] = req.body;
+           return res.status(200).send(events[id]);
+       } else {
+           return res.sendStatus(404);
+       }
+   }
+
+	static modifyCenter(req,res){
+		 const id = req.param.id - 1; // zero index
+       if (validateId(id, events)) {
+           events[id] = req.body;
+           return res.status(200).send(events[id]);
+       } else {
+           return res.sendStatus(404);
+       }
+      }
+
+    static deleteEvent(req,res){
+       	const id = req.param.id - 1; // zero index
+       if (validateId(id, events)) {
+           events.splice(id, 1);
+           return res.status(200).send(events);
+       } else {
+           return res.sendStatus(404);
+       }
+
+     }
+   }
 
 
 
- module.exports = (app) => {
-   app.get('/api', (req, res) => res.status(200).send({
-     message: 'Welcome to the BOOK Events API!',
-   }));
- 
-   // list all centers
-   app.get('/api/centers', (req, res) => {
-		var recipesList = [];
-		// convert recipes object to list
-		Object.keys(recipes).forEach((key) => {
-			recipesList.push(recipes[key])
-		})
-
-		if (req.query.sort === 'upvotes') {
-			// sort recipes by ascending order of upvotes
-			recipesList.sort((a, b) => {
-				return a.upvotes - b.upvotes
-			});
-		}
-		res.status(200).send({
-			message: recipesList
-		});
- 	})
- 
-
-    // Add a center
- 	app.post('/api/recipes', (req, res) => {
- 		recipes[req.body.id] = req.body
-	   	res.status(200).send({
-	     	message: ['center added successfully', recipes]
-	   	});
- 	})
- 	// create an event
- 	app.post('/api/recipes', (req, res) => {
- 		recipes[req.body.name] = req.body
-	   	res.status(200).send({
-	     	message: ['event added successfully', recipes]
-	   	});
- 	})
-
- 	// get a center
- 	app.get('/api/recipes/id', (req, res) => {
-	   	res.status(200).send({
-	     	message: recipes[req.params.recipeId]
-	   	});
- 	})
-
- 	// get an event
- 	app.get('/api/recipes/id', (req, res) => {
-	   	res.status(200).send({
-	     	message: recipes[req.params.recipeId]
-	   	});
- 	})
- 
- 	// Modify the details of center
- 	app.put('/api/recipes/:id', (req, res) => {
- 		recipes[req.params.recipeId] = req.body
-	   	res.status(200).send({
-	     	message: ['center updated successfully', recipes]
-	   	});
- 	})
-
- 	// Modify the details of events
- 	app.put('/api/recipes/:id', (req, res) => {
- 		recipes[req.params.recipeId] = req.body
-	   	res.status(200).send({
-	     	message: ['event updated successfully', recipes]
-	   	});
- 	})
-
- 	// delete an event
- 	app.delete('/api/recipes/:id', (req, res) => {
- 		delete recipes[req.params.recipeId]
- 		res.status(200).send([{message:'recipe deleted successfully'}, recipes])
- 	})
- }
+module.exports = Controllers
+  
