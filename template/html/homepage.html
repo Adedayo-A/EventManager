@@ -1,68 +1,272 @@
 <!DOCTYPE html>
 <html>
-	<head lang="en">
-		<title>
-			Events Manager
-		</title>
-		<meta charset="utf-8">
-   		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<link rel="stylesheet" href="../css/bootstrap.css">
-		<link rel="stylesheet" href="../css/style.css">
-	</head>
-	<body>
-		<nav class="navbar navbar-dark bg-dark navmargin">
-		  <!-- Navbar content -->
-		  <header>
-		  	<h1 class="purple float-left headerHP">Book Events
-		  	</h1>
-		  </header>
-		  <span class="white text-center de-font userHP">Welcome User
-		  </span>
+  <head lang="en">
+    <title>
+      Events Manager
+    </title>
+    <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light navbar-dark bg-dark">
+      <a class="navbar-brand colorpic" href="/index.html">Book Events</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-		  	<button type="button" class="btn btn-primary float-right signOutHP">
-			  <span>
-			  	<h4>
-			  		<a href="index.html">Sign out</a>
-			  	</h4>
-			  </span>
-			</button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="eventsColor">Centers</span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="viewcenter.html">View Centers</a>
+              <a class="dropdown-item" href="#exampleModal" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Add center</a>
+            </div>
+           </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="eventsColor">Events</span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="viewevent.html">View Events</a>
+              <a class="dropdown-item" href="#addevent" data-toggle="modal" data-target="#addevent" data-whatever="@mdo">Add Events</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Sign out <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="admin"  data-toggle="modal" data-target="" data-whatever="@mdo">Admin <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+        <p>
+          <h3 class="text-center">Is your conference just around the corner? click <a href="<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#book" data-whatever="@mdo"><span><h5>here</h5></span></button></a> to book one of these halls now</h3>
+        </p>
 
-		</nav>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-offset-2 col-md-7">
-					<div id="imageCarousel" class="carousel slide" data-ride="carousel">
-						<div class="carousel-inner">
-							<div class="item active">
-								<img class="d-block w-100" src="../picFolder/center1.jpg" alt="First slide" />
-								<div class="carousel-caption">
-									<h3>center1</h3>
-									<p>1500 sits</p>
-								</div>
-							</div>
-							<div class="item">
-								<img class="d-block w-100" src="../picFolder/center2.jpg" class="img-fluid" />
-								<div class="carousel-caption">
-									<h3>center1</h3>
-									<p>1500 sits</p>
-								</div>
-							</div>
-							<div class="item">
-								<img class="d-block w-100" src="../picFolder/center3.jpg" class="img-fluid" />
-								<div class="carousel-caption">
-									<h3>center1</h3>
-									<p>1500 sits</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<script src="../css/bootstrap.js"></script>
-	</body>
+        <!-- Images -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col">   
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+              <div class="carousel-item active">
+                <img class="d-block w-100 img-fluid" src="../picFolder/center6.jpg" alt="First slide">
+                <div class="carousel-caption d-none d-md-block">
+                  <h3>White hall</h3>
+                  <p>1500 seater hall</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100 img-fluid" src="../picFolder/center8.jpg" alt="Second slide">
+                <div class="carousel-caption d-none d-md-block">
+                  <h3> Diamond hall</h3>
+                  <p>3000 seater hall</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100 img-fluid" src="../picFolder/center16.jpg" alt="Third slide">
+                <div class="carousel-caption d-none d-md-block">
+                  <h3> 7star hall</h3>
+                  <p>2000 seater hall</p>
+                </div>
+              </div>
+              <p class="parPad">
+                <h3>
+                    Thank you for visiting our page. Feel free to follow us on our social media handles.
+                </h3>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <!-- Modals -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add a center</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="form-control-label">Name of center:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="form-control-label">Description:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="form-control-label">Address:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+       <div class="form-group">
+            <label for="message-text" class="form-control-label">Status:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputFile">File input</label>
+            <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+            <small id="fileHelp" class="form-text text-muted">Upload File Here</small>
+          </div>
+           <div class="form-group">
+            <label for="message-text" class="form-control-label">Any other information:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <input type=button class="btn btn-primary" onClick="location.href='view.html'" value='Submit'><br><br>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+          <!-- modal start -->
+    <div class="modal fade" id="addevent" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add an event</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+          <div class="form-group">
+            <label for="recipient-name" class="form-control-label">Name of event:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="form-control-label">Description:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="form-control-label">Location:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+       <div class="form-group">
+          <form>
+            <label for="message-text" class="form-control-label">Anchor:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputFile">File input</label>
+            <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+            <small id="fileHelp" class="form-text text-muted">Upload File Here</small>
+         </div>
+         <div class="form-group">
+            <label for="message-text" class="form-control-label">Any other information:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+          </div>
+         </form>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+             <input type=button class="btn btn-primary" onClick="location.href='viewevent.html'" value='Submit'><br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal end -->
+
+
+        <!-- Modal starts -->
+      <div class="modal fade" id="book" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">For Available Centers</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="recipient-name" class="form-control-label">Name of hall:</label>
+                  <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="form-group">
+                  <label for="recipient-name" class="form-control-label">Proposed date and time:</label>
+                  <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="form-group">
+                  <label for="message-text" class="form-control-label">Purpose:</label>
+                  <textarea class="form-control" id="message-text"></textarea>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+               <input type=button class="btn btn-primary" onClick="location.href='add.html'" value='Submit'><br><br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <!-- Modal ends -->
+
+
+            <div class="modal fade" id="admin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">For Available Centers</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="recipient-name" class="form-control-label">Username:</label>
+                  <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="form-group">
+                  <label for="recipient-name" class="form-control-label">Email:</label>
+                  <input type="text" class="form-control" id="recipient-name">
+                </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+               <input type=button class="btn btn-primary" onClick="location.href='add.html'" value='Submit'><br><br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <!-- Modal ends -->
+
+
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <footer>
+        <a href="http:Facebook.com/dav1ane"><img src="../picFolder/facebook.png" alt="Facebook image" class="social-icon"></a>
+        <a href="http:twitter.com/dedayodav1"><img src="../picFolder/twit.png"   alt="Twitter image" class="social-icon"></a>
+        <p>&copy: 2017 Dayo.</p>
+      </footer>
+  </body>
 </html>
