@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <title>
+      Events Manager
+    </title>
+    <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Changa+One:400,400i|Open+Sans:400,400i,700,700i,800" rel="stylesheet">
+  </head>
+  <body id="view">
+    <nav class="navbar navbar-expand-lg navbar-light navbar-dark bg-dark">
+      <a class="navbar-brand colorpic" href="/index.html">Book Events</a>
+    </nav>
+    <div id="wrapper">
+      <section>
+          <ul id="gallery">
+            <li>
+              <a href="../picFolder/event1.jpgg">
+                <img src="../picFolder/event1.jpg" alt="my birthday">
+                <p>
+                  <h5>
+                  Name of event:.<br>
+                  It's my birthday come party with me on 25/11<br>
+                  At the red suites<br>
+                  Host: Felix<br>
+                  Come party with me
+                  </h5>
+                </p>
+              </a>
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">
+                  Delete
+                </button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addevent">
+                  Edit
+                </button>
+            </li>
+            <li>
+              <a href="picFolder/event2.jpg">
+                <img src="../picFolder/event2.jpg" alt="Ballerina">
+                <p>
+                  <h5>
+                  Name of event: Award.<br>
+                  Come, learn<br>
+                  15 mins drive from estate garden<br>
+                  </h5>
+                </p>
+              </a>
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">
+                  Delete
+                </button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addevent">
+                  Edit
+                </button>
+            </li>
+
+            <li>
+              <a href="picFolder/event3.jpg">
+                <img src="../picFolder/event3.jpg" alt="Friend's garden">
+                <p >
+                <h5>
+                Name of event: education talk<br>
+                30 mins drive from Toll-gate<br>
+                Anchor: Trexa                 
+                  </h5>
+                </p>
+              </a>
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">
+                  Delete
+                </button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addevent">
+                  Edit
+                </button>
+            </li>
+            <li>
+              <a href="picFolder/event4.jpg">
+                <img src="../picFolder/event4.jpg" alt="Partyland">
+                <p>
+                  <h5>
+                  Name of event: Music show< <br>
+                  It brings us together<br>
+                  20 mins drive from Old circle<br>
+                  4 stars<br>
+                  </h5>
+                </p>
+              </a>
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">
+                  Delete
+                </button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addevent">
+                  Edit
+                </button>
+            </li>
+            <li>
+              <a href="picFolder/event5.jpg">
+                <img src="../picFolder/event5.jpg" alt="Silverhouse">
+                <p>
+                  <h4>
+                  Name of event: education talk<br>
+                  Merit Awards<br>
+                  10 mins drive from sea side<br>
+                  </h4>
+                </p>
+              </a>
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">
+                  Delete
+                </button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addevent">
+                  Edit
+                </button>
+            </li>
+            <li>
+              <a href="picFolder/event6.jpg">
+                <img src="../picFolder/event6.jpg" alt="chill zone">
+                <p>
+                Nice events</p>
+              </a>
+            </li>
+            <li>
+              <a href="picFolder/event7.jpg">
+                <img src="../picFolder/event7.jpg" alt="Beauty Place">
+                <p>It's christmas</p>
+              </a>
+            </li>
+          </ul>
+
+            <!-- MODAL -->
+
+          <div class="modal fade" id="addevent" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Edit details here</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+          <div class="form-group">
+            <label for="recipient-name" class="form-control-label">Name of event:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="form-control-label">Description:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="form-control-label">Location:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+          </form>
+      </div>
+       <div class="form-group">
+            <label for="message-text" class="form-control-label">Anchor:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputFile">File input</label>
+            <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+            <small id="fileHelp" class="form-text text-muted">Upload File Here</small>
+         </div>
+          <div class="form-group">
+            <label for="message-text" class="form-control-label">Any other information:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal end -->
+
+    <!-- MODAL -->
+
+      <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+             Are you sure you want to delete event?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary">Confirm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODAL ENDS -->
+
+      </section>
+    </div>
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <footer>
+            <a href="http:Facebook.com/dav1ane"><img src="../picFolder/facebook.png" alt="Facebook image" class="social-icon"></a>
+            <a href="http:twitter.com/dedayodav1"><img src="../picFolder/twit.png"   alt="Twitter image" class="social-icon"></a>
+            <p>&copy: 2017 Dayo.</p>
+        </footer>
+  </body>
+</html>

@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <title>
+      Events Manager
+    </title>
+    <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Changa+One:400,400i|Open+Sans:400,400i,700,700i,800" rel="stylesheet">
+  </head>
+  <body id="view">
+    <nav class="navbar navbar-expand-lg navbar-light navbar-dark bg-dark">
+      <a class="navbar-brand colorpic" href="/index.html">Book Events</a>
+      <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search center">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    </nav>
+    <div id="wrapper">
+      <section>
+          <ul id="gallery">
+            <li>
+              <a href="../picFolder/center1.jpgg">
+                <img src="../picFolder/center1.jpg" alt="Grace hall">
+              </a>
+                <p>
+                  <h5>
+                  Name of hall: Grace hall<br>
+                  Capacity: 1500 seater hall<br>
+                  Distance: 15 mins drive from Banana Island<br>
+                  Rating: * * * * * <br>
+                  Next event<br> Wedding: 23/12/2017 <br>
+                  Upcoming events <br> Award : 03/02/2018<br>
+                                  Laughter fiesta: 10/02/2018<br>
+                                  Education conference: 15/02/2018
+
+                  </h5>
+                </p>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#event">
+                Edit
+              </button>
+            </li>
+            <li>
+              <a href="picFolder/center2.jpg">
+                <img src="../picFolder/center2.jpg" alt="Ballerina">
+              </a>
+                <p>
+                  <h5>
+                  Name of hall: Ballerina<br>
+                  Capacity: 2000 seater hall<br>
+                  Distance: 15 mins from the Airport<br>
+                  Rating: * * * * * <br>
+                  Next event<br> Christmas fun: 25/12/2017<br>
+                  Upcoming events <br> Award : 03/02/2018<br>
+                                  Book launch: 10/01/2018<br>
+                                  Education conference: 15/02/2018
+                  </h5>
+                </p>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#event">
+                  Edit
+                </button>
+            </li>
+            <li>
+              <a href="picFolder/center3.jpg">
+                <img src="../picFolder/center3.jpg" alt="Friend's garden">
+              </a>
+                <p>
+                  <h5>
+                Name of hall: Friend's garden<br>
+                Capacity: 2000 seater hall<br>
+                Distance: 30 mins drive from Gateway<br>
+                Rating: * * * * * <br>
+                Next event<br> Birthday: 10/12/2017 <br>
+                Upcoming events<br> Youth talk conference : 03/02/2018<br>
+                                  Music fiesta: 15/02/2018<br>
+                                  Entrepreneurship conference: 20/01/2018
+                  </h5>
+                </p>
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#event">
+                   Edit
+                  </button>
+            </li>
+            <li>
+              <a href="picFolder/center5.jpg">
+                <img src="../picFolder/center5.jpg" alt="Partyland">
+              </a>
+                <p>
+                  <h5>
+                  Name of hall: Partyland <br>
+                  Capacity: 1500 seater hall<br>
+                  Feature: 300 metres car park<br>
+                  Distance: 20 mins drive from Old circle<br>
+                  Rating: * * * * <br>
+                  Next event<br> Gospel fiesta:05/12/2017<br>
+                  Upcoming events<br> Dance competition: 13/12/2017 <br>
+                                      Educational talk: 15/12/2017
+
+                  </h5>
+                </p>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#event">
+                  Edit
+                </button>
+            </li>
+            <li>
+              <a href="picFolder/center6.jpg">
+                <img src="../picFolder/center6.jpg" alt="Silverhouse">
+              </a>
+                <p>
+                  <h4>
+                  Name of hall: Silverhouse<br>
+                  Capacity: 2500 seater hall<br>
+                  Feature: international resort centre<br>
+                  Feature: Luxurious car parks<br>
+                  Distance: 10 mins drive from sea side<br>
+                  Rating: * * * * *
+                  </h4>
+                </p>
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#event">
+                    Edit
+                  </button>
+            </li>
+            <li>
+              <a href="picFolder/center7.jpg">
+                <img src="../picFolder/center7.jpg" alt="chill zone">
+              </a>
+                <p>Chill zone</p>
+               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#event">
+                  Edit
+               </button>
+            </li>
+            <li>
+              <a href="picFolder/center9.jpg">
+                <img src="../picFolder/center9.jpg" alt="Beauty Place">
+              </a>
+                <p>Beauty Place.</p>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#event">
+                  Edit
+               </button>
+            </li>
+          </ul>
+
+           
+        <!-- Modals -->
+
+<div class="modal fade" id="event" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Enter details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="form-control-label">Name of center:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="form-control-label">Description:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="form-control-label">Address:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+       <div class="form-group">
+            <label for="message-text" class="form-control-label">Status:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputFile">File input</label>
+            <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+            <small id="fileHelp" class="form-text text-muted">Upload File Here</small>
+          </div>
+           <div class="form-group">
+            <label for="message-text" class="form-control-label">Any other information:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save Changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      </section>
+    </div>
+          <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <footer>
+            <a href="http:Facebook.com/dav1ane"><img src="../picFolder/facebook.png" alt="Facebook image" class="social-icon"></a>
+            <a href="http:twitter.com/dedayodav1"><img src="../picFolder/twit.png"   alt="Twitter image" class="social-icon"></a>
+            <p>&copy: 2017 Dayo.</p>
+          </footer>
+  </body>
+</html>
